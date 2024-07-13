@@ -1,0 +1,57 @@
+/* Home.css */
+
+/* Style for the home page container */
+.home {
+    padding: 20px; /* Add padding to create space around the content */
+    background-color: aqua;
+  }
+  
+  /* Style for the content area */
+  .h-content {
+    margin-bottom: 20px; /* Add margin at the bottom to create space between content and blur box */
+  }
+  
+  /* Style for the blur box */
+  .blur-box {
+    position: fixed; /* Fixed position to stick the box at the bottom */
+    bottom: 0; /* Align the box at the bottom of the viewport */
+    left: 25%; /* Align the box to the left */
+    width: 50%; /* Make the box span the full width of the viewport */
+    padding: 20px; /* Add padding to create space inside the box */
+    background-color: rgba(161, 161, 161, 0.5); /* Semi-transparent white background */
+    backdrop-filter: blur(5px); /* Apply blur effect to the background */
+    align-items: center;
+    height: 70px;
+    
+  }
+  
+  /* Style for the content inside the blur box */
+  .blur-box-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+
+  }
+  
+  /* Style for the left content inside the blur box */
+  .left-content {
+    flex: 1; /* Make the left content expand to fill available space */
+  }
+  
+  /* Style for the right content inside the blur box */
+  .right-content {
+    flex: 1; /* Make the right content expand to fill available space */
+    text-align: right; /* Align text to the right */
+  }
+  
+  /* Style for the separator line */
+  .separator {
+    position: absolute; /* Position the separator relative to its closest positioned ancestor */
+    bottom: 10%; /* Align the separator vertically at the middle of the bottom section */
+    left: 85%; /* Align the separator horizontally at the center */
+    transform: translate(-50%, 50%) rotate(90deg); /* Translate the separator to center it and rotate it */
+    width: 10%; /* Set the width of the separator */
+    border: none; /* Remove default border */
+    border-top: 1px solid #050505;
+
+  }
+  
