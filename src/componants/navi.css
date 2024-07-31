@@ -1,5 +1,5 @@
 .naviBox{
-    background-color: #df0477;
+    background-color: #01d9ff;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
     font-size: 25px;
@@ -14,9 +14,9 @@
   }
   
   .tabs a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    margin-left: 20px;
+    margin-right: 20px;
   }
   
   .tabs a:hover {
