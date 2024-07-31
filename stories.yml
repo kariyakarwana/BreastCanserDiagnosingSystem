@@ -1,0 +1,79 @@
+version: "3.1"
+
+stories:
+- story: greet and goodbye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: provide feedback
+  steps:
+  - intent: provide_feedback
+  - action: utter_ask_feedback
+  - action: action_listen
+  - action: action_get_feedback
+  - action: utter_thank_feedback
+
+- story: rate website
+  steps:
+  - intent: rate_website
+  - action: utter_ask_rating
+  - action: action_listen
+  - slot_was_set:
+      - rating: 5
+  - action: action_get_rating
+  - action: utter_thank_feedback
+
+- story: provide feedback and rate
+  steps:
+  - intent: provide_feedback
+  - action: utter_ask_feedback
+  - action: action_listen
+  - action: action_get_feedback
+  - action: utter_thank_feedback
+  - intent: rate_website
+  - action: utter_ask_rating
+  - action: action_listen
+  - slot_was_set:
+      - rating: 4
+  - action: action_get_rating
+  - action: utter_thank_feedback
+
+- story: mood great
+  steps:
+  - intent: mood_great
+  - action: utter_mood_great
+
+- story: mood unhappy
+  steps:
+  - intent: mood_unhappy
+  - action: utter_mood_unhappy
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

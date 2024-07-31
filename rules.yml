@@ -1,0 +1,28 @@
+version: "3.1"
+
+rules:
+- rule: Greet and respond
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Provide feedback
+  steps:
+  - intent: provide_feedback
+  - action: utter_ask_feedback
+  - action: action_listen
+  - action: action_get_feedback
+  - action: utter_thank_feedback
+
+- rule: Rate website
+  steps:
+  - intent: rate_website
+  - action: utter_ask_rating
+  - action: action_listen
+  - action: action_get_rating
+  - action: utter_thank_feedback

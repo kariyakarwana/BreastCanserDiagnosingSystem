@@ -1,0 +1,65 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - provide_feedb
+  - ack  # This was incorrectly indented
+  - rate_website  # This was incorrectly indented
+
+entities:
+  - rating
+
+slots:
+  rating:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: rating
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+
+  utter_ask_feedback:
+    - text: "Please provide your feedback."
+
+  utter_ask_rating:
+    - text: "Please provide a rating from 1 to 5."
+
+  utter_thank_feedback:
+    - text: "Thank you for your feedback!"
+
+  utter_mood_great:
+    - text: "That's great to hear!"
+
+  utter_mood_unhappy:
+    - text: "I'm sorry to hear that. How can I assist you?"
+
+  utter_cheer_up:
+    - text: "Don't worry, things will get better! How can I assist you?"
+
+  utter_did_that_help:
+    - text: "Did that help?"
+
+  utter_bot_challenge:
+    - text: "I am a bot, here to assist you."
+
+  utter_happy:
+    - text: "I'm glad to hear that you're feeling happy!"
+
+actions:
+  - action_get_feedback
+  - action_get_rating
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,53 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - take care
+
+- intent: affirm
+  examples: |
+    - yes
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+
+- intent: provide_feedback
+  examples: |
+    - I have feedback
+    - I want to give feedback
+    - Here's my feedback
+    - I have some suggestions
+    - I have some complaints
+    - I want to provide feedback
+    - I would like to give feedback
+    - I want to leave feedback
+
+- intent: rate_website
+  examples: |
+    - I want to rate the website
+    - I want to give a rating
+    - I have a rating
+    - I would like to rate your site
+    - My rating is [5](rating)
+    - I rate it [4](rating)
+    - I give it [3](rating)
